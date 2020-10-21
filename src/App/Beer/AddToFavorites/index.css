@@ -1,7 +1,8 @@
 .star {
   font-size: 1.5em;
   display: flex;
-  height: 4em;
+  position: relative;
+  bottom: 1.2em;
   /* outline: 1px red dashed; */
   flex-direction: column;
   align-content: flex-start;

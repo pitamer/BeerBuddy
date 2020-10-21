@@ -8,8 +8,20 @@ import Rating from "./Rating";
 import Modal from "./Modal";
 
 function Beer(props) {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const handleModalOpen = () => {
+    console.log("Opening Modal");
+    setModalOpen(true);
+  };
+  const handleModalClose = () => {
+    console.log("Closing Modal");
+    setModalOpen(false);
+  };
   return (
-    <Card className="BeerContainer">
+    // onMouseDown is used here instead of onClick to avoid a strage
+    // bug in Material-UI thet prevents dialogs from closing when opened
+    // from components with specific behavior.
+    <Card className="BeerContainer" onMouseDown={handleModalOpen}>
       <div className="Beer">
         <div className="pic-and-options">
           <Rating
@@ -30,7 +42,13 @@ function Beer(props) {
         <div className="beer-name-container">
           <h4 className="beer-name">{props.beer.name}</h4>
         </div>
-        <Modal />
+        <Modal
+          beer={props.beer}
+          modalOpen={modalOpen}
+          handleModalOpen={handleModalOpen}
+          handleModalClose={handleModalClose}
+          setModalOpen={setModalOpen}
+        />
       </div>
     </Card>
   );

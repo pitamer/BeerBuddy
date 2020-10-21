@@ -5,7 +5,10 @@ import "./index.css";
 function AddToFavorites(props) {
   return (
     <div
-      onClick={() => props.toggleFavorite(props.beer)}
+      onClick={(e) => {
+        e.stopPropagation();
+        props.toggleFavorite(props.beer);
+      }}
       className={`star ${props.beer.inFavorites ? "full" : "empty"}`}
     >
       ★
