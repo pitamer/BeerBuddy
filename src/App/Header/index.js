@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  AppBar: {
+    backgroundColor: '#63a4ff',
+    backgroundImage: 'linear-gradient(315deg, #06BCFB 0%, #4884EE 74%)',
+  },
   buttonSubtitle: {
     marginLeft: "0.5em",
   },
@@ -89,7 +93,7 @@ function Header() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.AppBar}>
         <Toolbar>
           <IconButton
             edge="start"

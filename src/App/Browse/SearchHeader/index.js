@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "0px",
   },
   AppBar: {
-    // backgroundColor: "transparent",
-    backgroundColor: "grey",
-    color: "black",
-    marginBottom: "1em",
+    backgroundColor: "transparent",
+    color: "#ddd",
     boxShadow: "none",
+    marginTop: '0.5em',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -136,14 +135,14 @@ function SearchHeader() {
             <MoreIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            {`${searchType}:`}
+            {`Search`}
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder={`By ${searchType}`} 
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
