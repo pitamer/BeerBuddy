@@ -31,17 +31,7 @@ function Modal(props) {
     const foodPairingString = foodPairing
       .map((f) => (f === "or" ? "or" : `${f},`))
       .join(" ");
-    const openings = [
-      "Best with",
-      "Enhanced by ",
-      "Try it with ",
-      "Tastes great with ",
-      "Recommended alongside",
-      "Goes hand in hand with",
-    ];
-    const randomIndex = Math.floor(Math.random() * openings.length);
-    const randomOpening = openings[randomIndex];
-    return `${randomOpening} ${foodPairingString}`.slice(0, -1);
+    return `Recommended alongside ${foodPairingString}`.slice(0, -1);
   };
   return (
     <Dialog
