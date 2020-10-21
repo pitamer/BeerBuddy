@@ -2,12 +2,12 @@ import React from 'react';
 import { observer } from "mobx-react";
 import './index.css';
 
-function Modal() {
+function AddToFavorites() {
   return (
-    <div className="Modal">
-      Modal
+    <div className="AddToFavorites">
+      AddToFavorites
     </div>
   );
 }
 
-export default observer(Modal);
+export default observer(AddToFavorites);

@@ -13,9 +13,13 @@ function Browse() {
   return (
     <div className="Browse">
       <SearchHeader />
-      {store.beersOnDisplay.map((beer) => (
-        <Beer beer={beer} toggleFavorite={store.toggleFavorite} />
-      ))}
+      <Grid container spacing={4} style={{}}>
+        {store.beersOnDisplay.map((beer) => (
+          <Grid item xs={6} sm={3} md={2} key={beer.id}>
+            <Beer beer={beer} toggleFavorite={store.toggleFavorite} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
