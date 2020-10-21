@@ -3,9 +3,12 @@ import { createContext } from "react";
 
 export const BeersStore = () => {
   const store = observable({
-    
     // Store items
     beers: [],
+    beersOnDisplay: [],
+    get favorites() {
+      return store.beers.filter((beer) => beer.inFavorites);
+    },
 
     // Store actions
     fetchAll: action(async () => {
@@ -23,9 +26,18 @@ export const BeersStore = () => {
         store.beers = newBeers1
           .concat(newBeers2)
           .map((b) => ({ ...b, score: 0 }));
+        // Initialy set store.beersOnDisplay to equal store.beers
+        store.setBeersOnDisplay(store.beers);
       });
       updateBeers();
     }),
+
+    setBeersOnDisplay: action((newArr) => (store.beersOnDisplay = newArr)),
+
+    toggleFavorite: action((beer) => (beer.inFavorites = !beer.inFavorites)),
+
+    rateUp: action((beer) => beer.score++),
+    rateDown: action((beer) => beer.score--),
   });
 
   return store;
