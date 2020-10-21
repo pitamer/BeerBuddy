@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
   AppBar: {
     backgroundImage: 'var(--dark-background-image)',
   },
+  title: {
+    fontFamily: 'Pacifico',
+    paddingBottom: '0.3em',
+  },
   buttonSubtitle: {
     marginLeft: "0.5em",
   },
@@ -103,7 +107,7 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h5" noWrap>
             BeerBuddy
           </Typography>
           <div className={classes.grow} />

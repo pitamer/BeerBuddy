@@ -1,9 +1,7 @@
 body {
   margin: 0;
-  /* background-color: grey; */
   background-image: var(--grey-background-image);
-  /* background-image: url(https://www.toptal.com/designers/subtlepatterns/random-grey-variations/); */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +16,6 @@ body {
 }
 
 ::selection {
-  background-color: #BA9EB0;
+  background-color: #ba9eb0;
   color: #fff;
 }
