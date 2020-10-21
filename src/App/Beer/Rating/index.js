@@ -2,12 +2,12 @@ import React from 'react';
 import { observer } from "mobx-react";
 import './index.css';
 
-function Rating() {
+function AddToFavorites() {
   return (
-    <div className="Rating">
-
+    <div className="AddToFavorites">
+      AddToFavorites
     </div>
   );
 }
 
-export default observer(Rating);
+export default observer(AddToFavorites);

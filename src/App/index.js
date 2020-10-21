@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { observer, useLocalObservable } from "mobx-react";
 import "./index.css";
@@ -11,6 +11,12 @@ import Header from "./Header";
 
 function App() {
   const store = useLocalObservable(BeerStore);
+
+  useEffect(() => {
+    store.fetchAll();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <BeersStoreContext.Provider value={store}>
       <Router>
