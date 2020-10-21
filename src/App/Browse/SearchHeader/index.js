@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { observer } from "mobx-react";
 import "./index.css";
 
@@ -90,8 +90,7 @@ function SearchHeader() {
   const [searchEntry, setSearchEntry] = React.useState("");
   const [searchType, setSearchType] = React.useState("Food Pairing");
 
-  const handleSearchChange = (e) => {
-    setSearchEntry(e.target.value);
+  useEffect(() => {
     if (searchType === "Beer Name") {
       store.setBeersOnDisplay(
         store.beers.filter((b) =>
@@ -107,6 +106,11 @@ function SearchHeader() {
         )
       );
     }
+    // eslint-disable-next-line
+  }, [searchEntry, searchType]);
+
+  const handleSearchChange = (e) => {
+    setSearchEntry(e.target.value);
   };
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
