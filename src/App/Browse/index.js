@@ -19,8 +19,6 @@ function Browse() {
             <Beer
               beer={beer}
               toggleFavorite={store.toggleFavorite}
-              rateUp={store.rateUp}
-              rateDown={store.rateDown}
             />
           </Grid>
         ))}

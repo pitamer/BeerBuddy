@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   AppBar: {
-    backgroundColor: '#63a4ff',
-    backgroundImage: 'linear-gradient(315deg, #06BCFB 0%, #4884EE 74%)',
+    backgroundColor: 'var(--header-color)',
+    // backgroundImage: 'linear-gradient(315deg, #06BCFB 0%, #4884EE 74%)',
   },
   buttonSubtitle: {
     marginLeft: "0.5em",

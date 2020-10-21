@@ -12,3 +12,9 @@
 .rating-number {
   text-align: center;
 }
+
+.rating-invisible {
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0em;
+}
