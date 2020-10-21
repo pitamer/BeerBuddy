@@ -13,7 +13,7 @@ function Browse() {
   return (
     <div className="Browse">
       <SearchHeader />
-      <Grid container spacing={4} style={{}}>
+      <Grid container spacing={4} style={{ margin: 0, width: "100%" }}>
         {store.beersOnDisplay.map((beer) => (
           <Grid item xs={6} sm={3} md={2} key={beer.id}>
             <Beer beer={beer} toggleFavorite={store.toggleFavorite} />
