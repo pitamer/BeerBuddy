@@ -5,7 +5,7 @@ import './index.css';
 function Favorites() {
   return (
     <div className="Favorites">
-
+      Favorites
     </div>
   );
 }

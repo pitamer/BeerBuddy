@@ -5,7 +5,7 @@ import './index.css';
 function Browse() {
   return (
     <div className="Browse">
-
+      Browse
     </div>
   );
 }
