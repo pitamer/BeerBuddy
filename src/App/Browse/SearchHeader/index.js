@@ -5,7 +5,7 @@ import './index.css';
 function SearchHeader() {
   return (
     <div className="SearchHeader">
-
+      SearchHeader
     </div>
   );
 }

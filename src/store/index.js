@@ -1,7 +1,7 @@
 import { action, observable } from "mobx";
 import { createContext } from "react";
 
-export const BeersStore = () => {
+export const BeerStore = () => {
   const store = observable({
     // Store items
     beers: [],
