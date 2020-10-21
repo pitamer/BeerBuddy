@@ -16,3 +16,8 @@ body {
   --light-background-image: url(./utils/exclusive_paper.png);
   --header-color: #333;
 }
+
+::selection {
+  background-color: #BA9EB0;
+  color: #fff;
+}

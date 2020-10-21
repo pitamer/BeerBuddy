@@ -72,7 +72,7 @@ function Header() {
       onClose={handleMobileMenuClose}
     >
       <Link to="/" className={classes.routerLink}>
-        <MenuItem>
+        <MenuItem onClick={() => handleMobileMenuClose()}>
           <IconButton aria-label="Browse beers" color="inherit">
             <LocalCafeSharpIcon />
           </IconButton>
@@ -80,7 +80,7 @@ function Header() {
         </MenuItem>
       </Link>
       <Link to="/favorites" className={classes.routerLink}>
-        <MenuItem>
+        <MenuItem onClick={() => handleMobileMenuClose()}>
           <IconButton aria-label="Favorite beers" color="inherit">
             <StarsSharpIcon />
           </IconButton>

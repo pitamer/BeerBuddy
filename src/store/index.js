@@ -25,7 +25,7 @@ export const BeerStore = () => {
       const updateBeers = action(() => {
         store.beers = newBeers1
           .concat(newBeers2)
-          .map((b) => ({ ...b, score: 0 }));
+          .map((b) => ({ ...b, score: 1 }));
         // Initialy set store.beersOnDisplay to equal store.beers
         store.setBeersOnDisplay(store.beers);
       });

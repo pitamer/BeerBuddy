@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { observer } from "mobx-react";
-import './index.css';
+import "./index.css";
 
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -14,6 +14,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { Fastfood, LocalOffer } from "@material-ui/icons";
 
+import BeersStoreContext from "../../../store";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -22,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
   },
   AppBar: {
     backgroundColor: "transparent",
-    color: "#ddd",
+    color: "#eee",
     boxShadow: "none",
-    marginTop: '0.5em',
+    marginTop: "0.5em",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -64,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
+    // Vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -81,9 +83,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function SearchHeader() {
+  const store = useContext(BeersStoreContext);
+
   const classes = useStyles();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [searchEntry, setSearchEntry] = React.useState("");
   const [searchType, setSearchType] = React.useState("Food Pairing");
+
+  const handleSearchChange = (e) => {
+    setSearchEntry(e.target.value);
+    if (searchType === "Beer Name") {
+      store.setBeersOnDisplay(
+        store.beers.filter((b) =>
+          b.name.toLowerCase().includes(searchEntry.toLowerCase())
+        )
+      );
+    } else {
+      store.setBeersOnDisplay(
+        store.beers.filter((b) =>
+          b.food_pairing.some((i) =>
+            i.toLowerCase().includes(searchEntry.toLowerCase())
+          )
+        )
+      );
+    }
+  };
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -106,14 +130,24 @@ function SearchHeader() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={() => setSearchType("Beer Name")}>
-        <IconButton aria-label="show 4 new mails" color="inherit">
+      <MenuItem
+        onClick={() => {
+          setSearchType("Beer Name");
+          handleMobileMenuClose();
+        }}
+      >
+        <IconButton aria-label="Search by food pairing" color="inherit">
           <LocalOffer />
         </IconButton>
         <p>Search by beer name</p>
       </MenuItem>
-      <MenuItem onClick={() => setSearchType("Food Pairing")}>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
+      <MenuItem
+        onClick={() => {
+          setSearchType("Food Pairing");
+          handleMobileMenuClose();
+        }}
+      >
+        <IconButton aria-label="Search by beer name" color="inherit">
           <Fastfood />
         </IconButton>
         <p>Search by food pairing</p>
@@ -142,12 +176,17 @@ function SearchHeader() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder={`By ${searchType}`} 
+              placeholder={`By ${searchType}`}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ "aria-label": "search" }}
+              value={searchEntry}
+              onChange={handleSearchChange}
+              // onInput={() => {
+
+              // }}
             />
           </div>
           <div className={classes.root} />
