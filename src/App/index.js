@@ -11,11 +11,15 @@ import Header from "./Header";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Browse />
-      <Favorites />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Browse} />
+          <Route path="/favorites" component={Favorites} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
