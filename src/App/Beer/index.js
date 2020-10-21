@@ -12,7 +12,11 @@ function Beer(props) {
     <Card className="BeerContainer">
       <div className="Beer">
         <div className="pic-and-options">
-          <Rating />
+          <Rating
+            beer={props.beer}
+            rateUp={props.rateUp}
+            rateDown={props.rateDown}
+          />
           <img
             src={props.beer.image_url}
             alt={`A demo of ${props.beer.name}`}

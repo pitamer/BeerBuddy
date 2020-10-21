@@ -1,0 +1,14 @@
+.Rating {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  margin-bottom: 0.7em;
+}
+
+.rating-button {
+  color: grey;
+  text-align: center;
+}
+
+.rating-number {
+  text-align: center;
+}

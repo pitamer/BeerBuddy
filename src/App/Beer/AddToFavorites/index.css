@@ -1,0 +1,29 @@
+.star {
+  font-size: 1.5em;
+  display: flex;
+  height: 4em;
+  /* outline: 1px red dashed; */
+  flex-direction: column;
+  align-content: flex-start;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  /* csslint ignore:start */
+  /* text-stroke: 0.5px black; */
+  /* csslint ignore:end */
+  -webkit-text-stroke: 0.5px black;
+  /* padding: 0.2em; */
+  /* position: relative; */
+  /* align-self: flex-end; */
+  /* top: 0em; */
+  /* right: 5px; */
+  /* outline: 1px red dashed; */
+}
+
+.empty {
+  color: transparent;
+}
+
+.full {
+  color: gold;
+}
