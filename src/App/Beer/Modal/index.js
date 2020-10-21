@@ -5,7 +5,7 @@ import './index.css';
 function Modal() {
   return (
     <div className="Modal">
-      Modal
+      {/* Modal */}
     </div>
   );
 }

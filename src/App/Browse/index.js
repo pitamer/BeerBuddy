@@ -16,7 +16,12 @@ function Browse() {
       <Grid container spacing={3} style={{ margin: 0, width: "100%" }}>
         {store.beersOnDisplay.map((beer) => (
           <Grid item xs={6} sm={3} md={2} key={beer.id}>
-            <Beer beer={beer} toggleFavorite={store.toggleFavorite} />
+            <Beer
+              beer={beer}
+              toggleFavorite={store.toggleFavorite}
+              rateUp={store.rateUp}
+              rateDown={store.rateDown}
+            />
           </Grid>
         ))}
       </Grid>

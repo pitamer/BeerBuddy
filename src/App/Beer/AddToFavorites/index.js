@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 import { observer } from "mobx-react";
-import './index.css';
+import "./index.css";
 
-function AddToFavorites() {
+function AddToFavorites(props) {
   return (
-    <div className="AddToFavorites">
-      ♥
+    <div
+      onClick={() => props.toggleFavorite(props.beer)}
+      className={`star ${props.beer.inFavorites ? "full" : "empty"}`}
+    >
+      ★
     </div>
   );
 }

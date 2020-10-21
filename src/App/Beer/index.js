@@ -9,7 +9,7 @@ import Modal from "./Modal";
 
 function Beer(props) {
   return (
-    <Card>
+    <Card className="BeerContainer">
       <div className="Beer">
         <div className="pic-and-options">
           <Rating />
@@ -18,9 +18,14 @@ function Beer(props) {
             alt={`A demo of ${props.beer.name}`}
             className="beer-pic"
           ></img>
-          <AddToFavorites />
+          <AddToFavorites
+            toggleFavorite={props.toggleFavorite}
+            beer={props.beer}
+          />
         </div>
-        <h4 className="beer-name">{props.beer.name}</h4>
+        <div className="beer-name-container">
+          <h4 className="beer-name">{props.beer.name}</h4>
+        </div>
         <Modal />
       </div>
     </Card>
