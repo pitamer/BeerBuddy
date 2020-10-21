@@ -1,23 +1,32 @@
 .dialog-content-div {
-    display: flex;
+  /* display: flex; */
+  text-align: center;
 }
 
 .dialog-img {
   height: 12em;
+  margin-bottom: 1em;
 }
 
 .dialog-tagline {
-
+  background-color: #333;
+  color: white;
+  padding: 0.3em 0em;
 }
 
 .dialog-description {
-
+  text-align: left;
+  border-bottom: 2px #333 solid;
+  padding-bottom: 0.4em;
 }
 
 .dialog-food {
-
+  text-align: left;
+  border-bottom: 2px #333 solid;
+  padding-bottom: 0.4em;
 }
 
-.dialog-first-brewed {
-    
+.dialog-alcohol {
+  font-style: oblique;
+  color: #999;
 }
