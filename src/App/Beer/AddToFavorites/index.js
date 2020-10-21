@@ -5,7 +5,9 @@ import "./index.css";
 function AddToFavorites(props) {
   return (
     <div
-      onClick={(e) => {
+      // onMouseDown is used here instead of onClick to avoid
+      // propagation bug bubbling to Beer component and Modal
+      onMouseDown={(e) => {
         e.stopPropagation();
         props.toggleFavorite(props.beer);
       }}

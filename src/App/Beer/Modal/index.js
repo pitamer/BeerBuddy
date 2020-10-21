@@ -11,13 +11,13 @@ import Typography from "@material-ui/core/Typography";
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    backgroundImage: "var(--light-background-image)",
   },
 }))(MuiDialogContent);
 
 const DialogTitle = withStyles(() => ({
   root: {
-    // padding: theme.spacing(2),
-    backgroundColor: "#333",
+    backgroundImage: 'var(--dark-background-image)',
     color: "white",
     textAlign: "center",
     boxShadow: "0px 0px 1px white inset",
@@ -63,7 +63,7 @@ function Modal(props) {
               {getFoodRecommendation(props.beer.food_pairing)}
             </Typography>
             <Typography gutterBottom className="dialog-alcohol">
-              {`Alcohol: ${props.beer.abv}%`}
+              {`Alcohol by volume: ${props.beer.abv}%`}
             </Typography>
           </div>
         </div>

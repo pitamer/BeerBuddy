@@ -1,6 +1,7 @@
 .BeerContainer {
   user-select: none;
   -moz-user-select: none;
+  background-image: var(--light-background-image);
 }
 
 .Beer {
