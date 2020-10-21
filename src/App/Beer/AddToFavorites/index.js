@@ -5,7 +5,7 @@ import './index.css';
 function AddToFavorites() {
   return (
     <div className="AddToFavorites">
-      AddToFavorites
+      ♥
     </div>
   );
 }

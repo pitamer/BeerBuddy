@@ -5,7 +5,7 @@ import './index.css';
 function Rating() {
   return (
     <div className="Rating">
-      Rating
+      ^
     </div>
   );
 }
