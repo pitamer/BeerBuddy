@@ -36,6 +36,9 @@ function Beer(props) {
           ></img>
           <AddToFavorites
             toggleFavorite={props.toggleFavorite}
+            // Passing props.rateUp so that AddToFavorites can see if
+            // it is undefined, and decide on warning brfore unfavoriting
+            rateUp={props.rateUp}
             beer={props.beer}
           />
         </div>

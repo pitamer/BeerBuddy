@@ -2,7 +2,13 @@
   user-select: none;
   -moz-user-select: none;
   background-image: var(--light-background-image);
+  cursor: pointer;
 }
+
+.BeerContainer:hover {
+    box-shadow: 0px 0px 4px 2px #222;
+    transition: 0.2s ease-out;
+  }
 
 .Beer {
   display: flex;
