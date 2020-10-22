@@ -19,11 +19,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   AppBar: {
-    backgroundImage: 'var(--dark-background-image)',
+    backgroundImage: "var(--dark-background-image)",
+    // width: "100%",
+    // position: "fixed",
+    // top: 0,
   },
   title: {
-    fontFamily: 'Pacifico',
-    paddingBottom: '0.3em',
+    fontFamily: "Pacifico",
+    paddingBottom: "0.3em",
   },
   buttonSubtitle: {
     marginLeft: "0.5em",
