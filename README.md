@@ -38,15 +38,15 @@ I believe in open source. As with all my other open-source projects, this one is
 
 ### AppBar
 
-always stays on the top of the page, and allows users to navigate between browsing the beer catalogue and inspecting their favorite beers.
+Always stays on the top of the page, and allows users to navigate between browsing the beer catalogue and inspecting their favorite beers.
 
 ### Browse
 
-The initial page users see, where they can browse the first 100 beers supplied by PunkAPI. Each beer card has a modal with more info that opens when the card is clicked, and an option to add this beer to favorites. There's also a mini-header with two search options: search by food pairing (default, as per spec) or by beer name (not listed in specification, but I thought it would make a useful addition). upon input to the search field, the results are automatically updated to include only beers that fit the user's search.
+The initial page users see, where they can browse the first 100 beers supplied by PunkAPI. Each beer card has a modal with more info that opens when the card is clicked, and an option to add this beer to favorites. There's also a mini-header with two search options: search by food pairing (default, as per spec) or by beer name (not listed in specification, but I thought it would make a useful addition). Upon input to the search field, the results are automatically updated to include only beers that fit the user's search.
 
 ### Favorites
 
-This page only shows beers the user marked as favorites. Each beer also has a raiting option, that allows the user to rate a beer from 1 to 5. The option to toggle favorite apears, but upon clicking it, the user is asked to confirm removing this beer from favorites, with an option to see the beer's modal again. There is no mini-header for search.
+This page only shows beers the user marked as favorites. Each beer also has a raiting option, that allows the user to rate a beer from 1 to 5. The option to toggle favorite appears, but upon clicking it, the user is asked to confirm removing this beer from favorites, with an option to see the beer's modal again. There is no mini-header for search.
 
 <br>
 
@@ -92,7 +92,7 @@ Routing is done with [React Router](https://reactrouter.com/), and is quite simp
 
 ### Responsivity
 
-The whole app is responsive and ready for usage on phone, laptop, tablet or what have you :)
+The whole app is responsive and ready for usage on phone, laptop, tablet or any other device.
 
 ### Material-UI
 
@@ -100,11 +100,12 @@ Iv'e used many of Material-UI's components, including AppBar, Card, Dialog and B
 
 ### CSS
 
-As Material-UI does most of the styling heavylifting, my CSS files are pretty basic. Every component in the project has a matching CSS file, although some of them aren't used. I like to use this file structure pattern as a default.
+As Material-UI does most of the styling heavylifting, my CSS files are pretty basic. Every component in the project has a matching CSS file, although some of them are empty. I like to use this file structure pattern as a default.
 
 ## Bugs
 
-Somewhere along the development process, the Browse component became pretty damn slow. I only discovered it close to submission time, so fixing it wasn't an option, but I bet it's a rather simple optimization fix.
+Somewhere along the development process, the Browse component became slow. I only discovered it close to submission time, so fixing it wasn't an option, but I believe it's a rather simple optimization fix.
 
 #
+
 <h2 align="center">Enjoy, and let me know what you think :)</h2>
