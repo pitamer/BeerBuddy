@@ -17,7 +17,7 @@ const DialogContent = withStyles((theme) => ({
 
 const DialogTitle = withStyles(() => ({
   root: {
-    backgroundImage: 'var(--dark-background-image)',
+    backgroundImage: "var(--dark-background-image)",
     color: "white",
     textAlign: "center",
     boxShadow: "0px 0px 1px white inset",

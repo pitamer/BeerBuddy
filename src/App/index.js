@@ -12,6 +12,7 @@ import Header from "./Header";
 function App() {
   const store = useLocalObservable(BeerStore);
 
+  // Fetch 100 beers on initial App start
   useEffect(() => {
     store.fetchAll();
     // eslint-disable-next-line

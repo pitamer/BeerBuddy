@@ -32,7 +32,7 @@ A React website for the best fictional beer company in the observable universe. 
 
 ## License
 
-I believe in open source. As with all of my other open-source projects, this one is effectively uncopyrighted. However, in compliance with the subject matter, I've decided to include the Beerware license. It's as permissive as it gets, plus it involves beer.
+I believe in open source. As with all my other open-source projects, this one is effectively uncopyrighted. However, in compliance with the subject matter, I've decided to include the Beerware license. It's as permissive as it gets, plus it involves beer.
 
 ## Usage
 
@@ -89,6 +89,10 @@ Routing is done with [React Router](https://reactrouter.com/), and is quite simp
 - the `/favorites` route, leading to the Favorites component
 
 ## Styling
+
+### Responsivity
+
+The whole app is responsive and ready for usage on phone, laptop, tablet or what have you :)
 
 ### Material-UI
 

@@ -6,6 +6,8 @@
 .dialog-img {
   height: 12em;
   margin-bottom: 1em;
+  user-select: none;
+  -moz-user-select: none;
 }
 
 .dialog-tagline {

@@ -31,12 +31,6 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
-  },
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -90,6 +84,7 @@ function SearchHeader() {
   const [searchEntry, setSearchEntry] = React.useState("");
   const [searchType, setSearchType] = React.useState("Food Pairing");
 
+  // change beers on display according to search field and search type
   useEffect(() => {
     if (searchType === "Beer Name") {
       store.setBeersOnDisplay(
@@ -167,7 +162,7 @@ function SearchHeader() {
             edge="start"
             className={classes.menuButton}
             color="inherit"
-            aria-label="open drawer"
+            aria-label="show search options"
             onClick={handleMobileMenuOpen}
           >
             <MoreIcon />

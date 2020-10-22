@@ -5,7 +5,7 @@ import "./index.css";
 import WarnongDialog from "./WarningDialog";
 
 function AddToFavorites(props) {
-  const alertBeforeRemoving = props.alertBeforeRemoving
+  const alertBeforeRemoving = props.alertBeforeRemoving;
   const [dialogOpen, setDialogOpen] = React.useState(false);
 
   const handleDialogOpen = (e) => {
@@ -19,8 +19,6 @@ function AddToFavorites(props) {
   return (
     <>
       <div
-        // onMouseDown is used here instead of onClick to avoid a
-        // propagation bug that starts in Beer component and Modal
         onMouseDown={(e) => {
           e.stopPropagation();
           alertBeforeRemoving

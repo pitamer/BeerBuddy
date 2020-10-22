@@ -17,9 +17,9 @@ function Beer(props) {
   };
 
   return (
-    // onMouseDown is used here instead of onClick to avoid a strage
-    // bug in Material-UI thet prevents dialogs from closing when opened
-    // from components with specific behavior.
+    // onMouseDown is used here and in clickable children components
+    // instead of onClick, to avoid a strage bug in Material-UI that
+    // prevents dialogs from closing when opened from specific components
     <Card className="BeerContainer" onMouseDown={handleModalOpen}>
       <div className="Beer">
         <div className="pic-and-options">

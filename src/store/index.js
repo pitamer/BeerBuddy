@@ -1,6 +1,14 @@
 import { action, observable } from "mobx";
 import { createContext } from "react";
 
+const handleError = function (err) {
+  console.warn(err);
+  return new Response(JSON.stringify({
+      code: 400,
+      message: 'Stupid network Error'
+  }));
+};
+
 export const BeerStore = () => {
   const store = observable({
     // Store items
@@ -15,12 +23,12 @@ export const BeerStore = () => {
       // Get first 80 beers
       const res1 = await fetch(
         `https://api.punkapi.com/v2/beers?page=1&per_page=80`
-      );
+      ).catch(handleError);
       const newBeers1 = await res1.json();
       // Get 20 more beers
       const res2 = await fetch(
         `https://api.punkapi.com/v2/beers?page=5&per_page=20`
-      );
+      ).catch(handleError);
       const newBeers2 = await res2.json();
       const updateBeers = action(() => {
         store.beers = newBeers1

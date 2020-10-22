@@ -106,7 +106,7 @@ function Header() {
             className={classes.menuButton}
             onClick={handleMobileMenuOpen}
             color="inherit"
-            aria-label="open drawer"
+            aria-label="open menu"
           >
             <MenuIcon />
           </IconButton>
