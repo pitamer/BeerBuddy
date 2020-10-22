@@ -36,8 +36,8 @@ export const BeerStore = () => {
 
     toggleFavorite: action((beer) => (beer.inFavorites = !beer.inFavorites)),
 
-    rateUp: action((beer) => beer.score < 6 && beer.score++),
-    rateDown: action((beer) => beer.score > 0 && beer.score--),
+    rateUp: action((beer) => beer.score < 5 && beer.score++),
+    rateDown: action((beer) => beer.score > 1 && beer.score--),
   });
 
   return store;

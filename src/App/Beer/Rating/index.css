@@ -5,8 +5,19 @@
 }
 
 .rating-button {
-  color: grey;
+  color: rgb(128, 128, 128);
   text-align: center;
+  transition: 0.2s ease-out;
+}
+
+.rating-button:hover {
+  color: rgb(170, 170, 170);
+  transition: 0.2s ease-out;
+}
+
+.rating-button:active {
+  color: #333;
+  transition: 0.04s ease-out;
 }
 
 .rating-number {

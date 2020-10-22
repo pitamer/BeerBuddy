@@ -3,7 +3,6 @@
   display: flex;
   position: relative;
   bottom: 1.2em;
-  /* outline: 1px red dashed; */
   flex-direction: column;
   align-content: flex-start;
   cursor: pointer;
@@ -13,12 +12,16 @@
   /* text-stroke: 0.5px black; */
   /* csslint ignore:end */
   -webkit-text-stroke: 0.5px black;
-  /* padding: 0.2em; */
-  /* position: relative; */
-  /* align-self: flex-end; */
-  /* top: 0em; */
-  /* right: 5px; */
-  /* outline: 1px red dashed; */
+
+  text-shadow: 0px 0px 0px;
+  transition: 0.15s ease-out;
+}
+
+.star:hover {
+  /* text-stroke: 0.6px black; */
+  -webkit-text-stroke: 0.7px black;
+  text-shadow: 0px 0px 0.1px #fff;
+  transition: 0.15s ease-out;
 }
 
 .empty {
