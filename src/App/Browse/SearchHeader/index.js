@@ -131,17 +131,6 @@ function SearchHeader() {
     >
       <MenuItem
         onClick={() => {
-          setSearchType("Beer Name");
-          handleMobileMenuClose();
-        }}
-      >
-        <IconButton aria-label="Search by food pairing" color="inherit">
-          <LocalOffer />
-        </IconButton>
-        <p>Search by beer name</p>
-      </MenuItem>
-      <MenuItem
-        onClick={() => {
           setSearchType("Food Pairing");
           handleMobileMenuClose();
         }}
@@ -150,6 +139,17 @@ function SearchHeader() {
           <Fastfood />
         </IconButton>
         <p>Search by food pairing</p>
+      </MenuItem>
+      <MenuItem
+        onClick={() => {
+          setSearchType("Beer Name");
+          handleMobileMenuClose();
+        }}
+      >
+        <IconButton aria-label="Search by food pairing" color="inherit">
+          <LocalOffer />
+        </IconButton>
+        <p>Search by beer name</p>
       </MenuItem>
     </Menu>
   );
