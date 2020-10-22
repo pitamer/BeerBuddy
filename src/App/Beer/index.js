@@ -10,13 +10,12 @@ import Modal from "./Modal";
 function Beer(props) {
   const [modalOpen, setModalOpen] = React.useState(false);
   const handleModalOpen = () => {
-    console.log("Opening Modal");
     setModalOpen(true);
   };
   const handleModalClose = () => {
-    console.log("Closing Modal");
     setModalOpen(false);
   };
+
   return (
     // onMouseDown is used here instead of onClick to avoid a strage
     // bug in Material-UI thet prevents dialogs from closing when opened
@@ -25,9 +24,10 @@ function Beer(props) {
       <div className="Beer">
         <div className="pic-and-options">
           <Rating
-            beer={props.beer}
-            rateUp={props.rateUp}
-            rateDown={props.rateDown}
+            score={props.beer.score}
+            rateUp={() => props.rateUp(props.beer)}
+            rateDown={() => props.rateDown(props.beer)}
+            displayRating={props.displayedFromFavorites}
           />
           <img
             src={props.beer.image_url}
@@ -36,9 +36,7 @@ function Beer(props) {
           ></img>
           <AddToFavorites
             toggleFavorite={props.toggleFavorite}
-            // Passing props.rateUp so that AddToFavorites can see if
-            // it is undefined, and decide on warning brfore unfavoriting
-            rateUp={props.rateUp}
+            alertBeforeRemoving={props.displayedFromFavorites}
             beer={props.beer}
           />
         </div>

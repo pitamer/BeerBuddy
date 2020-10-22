@@ -48,7 +48,10 @@ function AlertDialog(props) {
         Are you sure, buddy?
       </DialogTitle>
       <DialogContent>
-        <DialogContentText id={`Remove ${props.beerName} from favorites?`}>
+        <DialogContentText
+          id={`Remove ${props.beerName} from favorites?`}
+          component={"div"}
+        >
           <div>
             Remove <span className="warning-beer-name">{props.beerName}</span>{" "}
             from favorites?

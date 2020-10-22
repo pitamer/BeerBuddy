@@ -19,6 +19,7 @@ function Favorites() {
               toggleFavorite={store.toggleFavorite}
               rateUp={store.rateUp}
               rateDown={store.rateDown}
+              displayedFromFavorites={true}
             />
           </Grid>
         ))}

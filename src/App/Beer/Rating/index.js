@@ -3,14 +3,25 @@ import { observer } from "mobx-react";
 import "./index.css";
 
 function Rating(props) {
-  const displayRating = props.rateUp ? '' : 'rating-invisible'
+  const displayRating = props.displayRating ? "" : "rating-invisible";
+
+  const handleRateUp = (e) => {
+    e.stopPropagation();
+    props.rateUp();
+  };
+
+  const handleRateDown = (e) => {
+    e.stopPropagation();
+    props.rateDown();
+  };
+
   return (
     <div className={`Rating ${displayRating}`}>
-      <div className="rating-button" onClick={() => props.rateUp(props.beer)}>
+      <div className="rating-button" onMouseDown={handleRateUp}>
         ▲
       </div>
-      <div className="rating-number">{props.beer.score}</div>
-      <div className="rating-button" onClick={() => props.rateDown(props.beer)}>
+      <div className="rating-number">{props.score}</div>
+      <div className="rating-button" onMouseDown={handleRateDown}>
         ▼
       </div>
     </div>

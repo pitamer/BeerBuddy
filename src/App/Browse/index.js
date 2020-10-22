@@ -19,6 +19,7 @@ function Browse() {
             <Beer
               beer={beer}
               toggleFavorite={store.toggleFavorite}
+              displayedFromFavorites={false}
             />
           </Grid>
         ))}
