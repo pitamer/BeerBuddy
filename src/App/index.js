@@ -4,6 +4,7 @@ import { observer, useLocalObservable } from "mobx-react";
 import "./index.css";
 
 import BeersStoreContext, { BeerStore } from "../store";
+import consoleText from "../store/consoleText";
 
 import Browse from "./Browse";
 import Favorites from "./Favorites";
@@ -15,6 +16,7 @@ function App() {
   // Fetch 100 beers on initial App start
   useEffect(() => {
     store.fetchAll();
+    console.log(`%c ${consoleText}`, "background: #222; color: #bada55");
     // eslint-disable-next-line
   }, []);
 
